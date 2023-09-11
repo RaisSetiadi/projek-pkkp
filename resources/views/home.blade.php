@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.navUtama')
   
 @section('content')
 <div class="container">
