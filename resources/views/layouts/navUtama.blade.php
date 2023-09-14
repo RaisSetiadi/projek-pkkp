@@ -77,14 +77,14 @@
     <!-- end carousel -->
 
     <!-- card produk -->
-    <div class="container"> 
+    <div class="container" > 
       <div class="row">
       <h2>Sneakers</h2>
-     <div class="card">  
+     <div class="card" >  
        <div class="imgBx">  
          <img src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png" alt="nike-air-shoe">  
        </div>  
-       <div class="contentBx">  
+       <div class="contentBx ">  
          <h2>Nike Shoes</h2>  
          <div class="size">  
            <h3>Size :</h3>  

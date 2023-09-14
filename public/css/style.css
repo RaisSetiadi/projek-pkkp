@@ -69,6 +69,7 @@
     border-radius: 20px;  
     overflow: hidden;  
     margin-top: 20px;
+    margin-right: 100px;
   }  
   /* .container .card:before {  
     content: "";  
@@ -124,6 +125,7 @@
     transition: 1s;  
     z-index: 90;
     margin-left: 20px;  
+   
   }  
   .container .card:hover .contentBx {  
     height: 210px;  
