@@ -15,4 +15,9 @@ class Post extends Model
         'stok',
         'deskripsi',
     ];
+
+    public function pesananDetail(){
+        return $this->hasMany('App\PesananDetail','post_id','id');
+
+    }
 }

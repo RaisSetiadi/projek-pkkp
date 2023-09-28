@@ -59,4 +59,8 @@ class User extends Authenticatable
             get: fn ($value) =>  ["user", "admin"][$value],
         );
     }
+    public function pesanan(){
+        return $this->hasMany('App\Pesanan','user_id','id');
+
+    }
 }

@@ -6,6 +6,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\SneakersController;
 use App\Http\Controllers\AksesoriesController;
 use App\Http\Controllers\TrousersController;
+use App\Http\Controllers\ApparelController;
+use App\Http\Controllers\PesanController;
 
 
 /*
@@ -63,3 +65,10 @@ Route::get('/search/aksesoris', [AksesoriesController::class, 'cari'])->name('ak
 // route untuk halaman crud Trousers dan search pada halaman Trouser
 Route::resource('/trousers', \App\Http\Controllers\TrousersController::class);
 Route::get('/search/trousers', [TrousersController::class, 'cari'])->name('trousers.cari');
+//untuk menampilkan semua data apparel
+// Route::get('/apparel', [App\Http\Controllers\ApparelController::class, 'index'])->name('apparel');
+// untuk menuju pencarian atau pesan 
+Route::get('/pesan/{id}',[PesanController::class,'index'])->name('pesan.index');
+Route::get('/cekout/{id}',[PesanController::class,'pesan'])->name('pesan.pesan');
+
+

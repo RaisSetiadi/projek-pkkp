@@ -149,4 +149,5 @@ public function edit(string $id): View
         // mengirim data pegawai ke view index
         return view('trousers.index', compact('trouser'));
     }
+    
 }

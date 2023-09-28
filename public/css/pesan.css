@@ -1,0 +1,225 @@
+.container-input {
+    position: relative;
+}
+
+.input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    transform: translate(0, -50%);
+    margin-top: 12px;
+}
+
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+.nav-item a {
+    font-size: medium;
+    font-family: sans-serif;
+    margin-right: 30px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.carousel-item img {
+    width: 200px;
+    height: 250px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.container-input input {
+    margin-top: 30px;
+    margin-right: -25px;
+}
+.container-input {
+    margin-right: -5px;
+    margin-left: 20px;
+}
+.nav-item-barang a {
+    font-size: medium;
+    font-family: sans-serif;
+    margin-right: 30px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: rgb(49, 49, 49);
+    display: inline-block;
+    place-items: center;
+}
+.container .card {
+    margin-top: 180px;
+}
+.row img {
+    width: 434px;
+    height: 361px;
+}
+.deskripsi p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.table1 td {
+    margin-left: 10px;
+}
+.button button {
+    margin-top: 50px;
+    width: 267px;
+    height: 38px;
+    content: center;
+}
+.button {
+    --width: 267px;
+    --height: 38px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 0.25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.text {
+    top: 0;
+}
+
+.text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover {
+    background: #222;
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+.keterangan h4 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.note h4 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.description h4 {
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.logo-perusahaan img {
+    width: 250px;
+    height: 250px;
+}
+.footer-down {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 88px;
+}
+.footer {
+    height: 300px;
+}

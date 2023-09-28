@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama </title>
+    <title>Halaman Keterangan Produk</title>
     <!-- css -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/pesan.css') }}">
     <!-- icons boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- boostrap -->
@@ -65,112 +65,81 @@
         </div>
     </nav>
     <!-- end navbar -->
-    <!-- carousel -->
-    <div class="container">
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('pkkpp/halaman.jpg') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- end carousel -->
+    <!-- content pesan  -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                   <h4><b>STONE ISLAND</b></h4>
-                   </div>
-                   <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                <p>{{ $posts->nama_produk }}</p>
+                </div>
+                <div class="card-body">
                     <div class="row">
-                        <div class="col-md-3 deskripsi">
-                            <p>bLorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, cupiditate. Rem nobis repudiandae voluptatum iure, expedita illum dolor consequuntur cum quaerat minus dolores, labore modi porro quas deleniti est officia.</p>
-                            <div class="parent">
-                            <button class="button" >View More</button>
+                        <div class="col-md-6">
+                            <img src="{{ asset('/storage/posts/'.$posts->image) }}" class="rounded mx-auto d-block " alt="" srcset="">
+                        </div>
+                        <div class="col-md-6 deskripsi">
+                        <h4>{{ $posts->nama_produk }}</h4>
+                        <p>Start from</p>
+                        <table class="table1">
+                            <tbody>
+                                <tr>
+                                    <td>IDR</td>
+                                    <td></td>
+                                    <td>{{$posts->harga}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <center>
+                        <div class="d-grid gap-2 col-6 mx-auto" style="margin-top:40px;">
+                        <a href="{{ route('pesan.pesan',$posts->id) }}"class="btn btn-dark" type="button">Brand New</a>
+                        </div>
+                        <div data-tooltip="{{$posts->harga}}" class="button">
+                    <div class="button-wrapper">
+                    <div class="text">Buy Now</div>
+                    <span class="icon">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                    </svg>
+                        </span>
+                    </div>
+                    </div>
+                        </center>
+                        <!-- deskripsi -->
+                            <div class="col-md-12 keterangan">
+                                <h4>Authentic. Guaranteed.</h4>
+                                <p>Kami memeriksa secara menyeluruh setiap pembelian yang 
+                                Anda lakukan dan menerapkan jaminan perusahaan kami terhadap keabsahan 
+                                produk. Garansi berlaku selama 2 hari setelah produk diterima dari jasa pengiriman.
+                                Jika Anda memiliki kekhawatiran tentang produk yang Anda beli, 
+                                silakan hubungi Layanan Pelanggan dan Spesialis kami</p>
+                            </div> 
+                        <!-- end deskripsi -->
+
+                        <!-- deskripsi note -->
+                            <div class="col-md-12 note">
+                                <h4>Note</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam possimus ut doloremque soluta deserunt, commodi iste porro voluptatibus dicta sint laboriosam repellat distinctio culpa omnis perspiciatis delectus amet! Eum, pariatur.</p>
                             </div>
+                     <!-- end deskripsi note -->
                         </div>
-                        <div class="col-md-3 image">
-                            <img src="{{asset('pkkpp/st.jpeg')}}" alt="" srcset="">
-                        </div>
-                        <div class="col-md-3 content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto, culpa corrupti saepe veritatis unde, eum sunt quis labore quo itaque voluptatibus, beatae consequuntur soluta? At reprehenderit dolorum totam veniam.</p>
-                            <div class="parents">
-                            <button class="button" >View More</button>
+                        <div class="col-md-12 description">
+                                <h4>Description</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur reiciendis blanditiis perferendis. Totam, suscipit omnis porro consequuntur nisi in ab aspernatur. 
+                                    Voluptatem perspiciatis voluptatum dignissimos non assumenda, architecto exercitationem?Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Minima aspernatur reiciendis blanditiis perferendis. Totam, suscipit omnis porro consequuntur nisi in ab aspernatur. 
+                                    Voluptatem perspiciatis voluptatum dignissimos non assumenda, architecto exercitationem?</p>
                             </div>
-                        </div>
-                        <div class="col-md-3 image">
-                            <img src="{{asset('pkkpp/st.jpeg')}}" alt="" srcset="">
-                        </div>
                     </div>
                 </div>
-                </div>
-               
             </div>
+          </div>
         </div>
     </div>
-    <!-- card produk -->
-    <center>
-    @foreach ($posts as $post)  
-       <div class="container1">
-      <div class="col-md-4">
-      <div class="card" style="width: 12rem;>
-        <i class="bi bi-heart"></i>
-      <img src="{{ asset('/storage/posts/'.$post->image) }}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <a href="{{ route('pesan.index',$post->id) }}"><button type="button" class="btn btn-primary">Obral</button></a>
-        <div class="judul-post">
-            <h5>{{$post->nama_produk}}</h5>
-        </div>
-        <div class="harga-produk">
-        <h5>{{$post->harga}}</h5>
-        </div>
-    </div>
-        </div>
-      </div>
-       </div>
-@endforeach   
-</center>
-    <!-- end card produk Apparel-->
-
-    <!-- card trousers -->
-    <div class="judul">
-            <h3>Trousers</h3>
-        </div>
-
-  @foreach($trouser as $data)
-    <div class="container2"> 
-    <div class="col-md-4">
-            <div class="card" style="width: 12rem;">
-  <img src="{{ asset('/storage/trousers/'.$data->image) }}" class="card-img-top" alt="..">
-  <div class="card-body">
-    <h5 class="card-title">{{ $data->nama_produk }}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-      
-    </div>
-    </div>
-    @endforeach   
-    <!-- end card trousers -->
-    <!-- footer start -->
-    <div class="footer mt-5 bg-dark text-white p-5">
+   
+<!-- end content pesan -->
+<!-- footer start -->
+<div class="footer mt-5 bg-dark text-white p-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 logo-perusahaan">
@@ -229,8 +198,8 @@
             </div>
         </div>
       </div>
-    <!-- end footer  -->
- 
+      <!-- end footer -->
+
 </body>
 
 </html>
