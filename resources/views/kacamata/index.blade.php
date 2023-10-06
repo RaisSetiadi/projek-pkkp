@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Halaman Admin</title>
-  <link rel="website icon" type="png"href="{{asset('image/images.png')}} ">
+  <title>Halaman Kacamata</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('template/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{asset('template/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- iCheck -->
@@ -58,14 +57,14 @@
           <i class="fas fa-search"></i>
         </a>
         <div class="navbar-search-block">
-          <form class="form-inline">
+          <form action="{{ route('aksesoris.cari') }}" method="GET" class="form-inline">
             <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control form-control-navbar" type="text" name="cari" placeholder="Cari Produk" value="{{ old('cari') }}" aria-label="Search">
               <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
                   <i class="fas fa-search"></i>
                 </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                <button class="btn btn-navbar" type="submit" value="search" data-widget="navbar-search">
                   <i class="fas fa-times"></i>
                 </button>
               </div>
@@ -176,7 +175,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-white-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/admin/home" class="brand-link">
+    <a href="admin/home" class="brand-link">
       <img src="{{asset('image/images.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-dark">PANDA SHOP</span>
     </a>
@@ -223,46 +222,6 @@
                   <p>Halaman Trousers</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('baju.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman T-Shirt</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('celana.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Pants</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('kacamata.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Kacamata</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('topi.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Topi</p>
-                </a>
-              </li>
-              <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link"  onclick="event.preventDefault();
-                         document.getElementById('logout-form').submit();"
-                        {{ __('Logout') }}
-                        class="flex items-center px-4 ml-1 py-2 mt-2 text-white-100 ">
-            <i class="bi bi-box-arrow-left"></i>
-              <p>
-                Logout
-              </p>
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-          
-          </li>
-       </li>
             </ul>
           </li>         
         </ul>
@@ -296,68 +255,58 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-
-                <p>New Orders</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <div class="col-md-12">
+                <div>
+                    <!-- <h3 class="text-center my-4">Tutorial Laravel 10 untuk Pemula</h3>
+                    <h5 class="text-center"><a href="https://santrikoding.com">www.santrikoding.com</a></h5>          -->
+                    <hr>
+                </div>
+                <div class="card border-0 shadow-sm rounded">
+                    <div class="card-body">
+                        <a href="{{ route('kacamata.create') }}" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
+                        <table class="table table-bordered">
+                            <thead>
+                          <tr>
+                                <th scope="col">GAMBAR</th>
+                                <th scope="col">NAMA PRODUK</th>
+                                <th scope="col">HARGA</th>
+                                <th scope="col">STOK</th>
+                                <th scope="col">DESKRIPSI</th>
+                                <th scope="col">AKSI</th>
+                          </tr>
+                            </thead>
+                            <tbody>
+                              @forelse ($kacamatas as $data)
+                                <tr>
+                                    <td class="text-center">
+                                        <img src="{{ asset('/storage/kacamata/'.$data->image) }}" class="rounded" style="width: 150px">
+                                    </td>
+                                    <td>{{ $data->nama_produk }}</td>
+                                    <td>{{ $data->harga }}</td>
+                                    <td>{{ $data->stok }}</td>
+                                    <td>{!! $data->deskripsi !!}</td>
+                                    <td class="text-center">
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('kacamata.destroy', $data->id) }}" method="POST">
+                                            <a href="{{ route('kacamata.show', $data->id) }}" class="btn btn-sm btn-dark">SHOW</a>
+                                            <a href="{{ route('kacamata.edit', $data->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                              @empty
+                                  <div class="alert alert-danger">
+                                      Data Post belum Tersedia.
+                                  </div>
+                              @endforelse
+                            </tbody>
+                          </table>  
+                          {{ $kacamatas->links() }}
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                <p>Bounce Rate</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
-
-                <p>User Registrations</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
+     
         <!-- /.row -->
     
       </div><!-- /.container-fluid -->
@@ -415,5 +364,21 @@
 <script src="{{asset('template/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('template/dist/js/pages/dashboard.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- <script>
+        //message with toastr
+        @if(session()->has('success'))
+        
+            toastr.success('{{ session('success') }}', 'BERHASIL!'); 
+
+        @elseif(session()->has('error'))
+
+            toastr.error('{{ session('error') }}', 'GAGAL!'); 
+            
+        @endif
+    </script> -->
 </body>
 </html>

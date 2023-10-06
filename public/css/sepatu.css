@@ -99,6 +99,51 @@
     font-size: 16px;
     margin-top: 20px;
 }
+.sneakers .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 200px;
+    height: 256px;
+}
+.sneakers .card-body h5 {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    color: #000000;
+    font-weight: bold;
+}
+.sneakers .card-body p {
+    font-weight: bold;
+    color: #3d845a;
+}
+.sneakers .card img {
+    height: 150px;
+    width: 150px;
+    background: transparent;
+    background-color: transparent;
+}
+.diskon .card {
+    border-radius: 10px;
+    width: 200px;
+}
+.diskon .card-body h5 {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+.diskon .card-body p {
+    font-weight: bold;
+    color: #3d845a;
+    text-align: center;
+}
+.diskon .card img {
+    height: 250px;
+    width: 190px;
+}
+
 .content button {
     display: inline-block;
     background: #000000;
@@ -114,51 +159,6 @@
     font-family: "Roboto", sans-serif;
     margin: 2rem 0;
 }
-/* card sneakers */
-.sneakers .card {
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-top: 0;
-}
-.sneakers .button {
-    height: 27px;
-    width: 140px;
-    margin-left: 10px;
-    position: relative;
-    background: rgb(212, 9, 9);
-    color: white;
-    margin-top: 20px;
-    display: grid;
-    place-items: center;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-.sneakers .card p {
-    text-align: center;
-    font-family: "Abril Fatface", cursive;
-    font-size: 16px;
-    font-weight: bold;
-}
-.sneakers .card h5 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-}
-/* .container1.card {
-    position: relative;
-    width: 200px;
-    height: 150px;
-    background: #333;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-right: 100px;
-} */
-.container .content h3 {
-    margin-top: 200px;
-}
-/* end card sneakersss */
 .content img {
     float: right;
     margin-right: 50px;
@@ -166,46 +166,28 @@
     height: 100px;
     width: 100px;
 }
-/* Card Trousers */
-.trousers .card {
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-top: 0;
+.judul h2 {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #fff;
+    text-align: justify;
+    margin-left: 50px;
 }
-.trousers h5 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
-}
-.trousers p {
-    text-align: center;
-    font-family: "Abril Fatface", cursive;
-    font-size: 16px;
+.judul-tshirt h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 32px;
     font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
 }
-/* end card trousers */
-
 .footer {
     background-color: #282626;
     height: 300px;
 }
 .footer h3 {
     text-align: center;
-}
-.container2 {
-    position: relative;
-    margin-top: 100px;
-    margin-left: 68px;
-    margin-right: 70px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-.container2 img {
-    width: 175px;
-    height: 175px;
-    align-items: center;
 }
 .logo-perusahaan img {
     width: 250px;

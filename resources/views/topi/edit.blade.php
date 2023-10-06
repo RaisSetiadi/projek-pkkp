@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Halaman Admin</title>
-  <link rel="website icon" type="png"href="{{asset('image/images.png')}} ">
+  <title>Halaman Edit Apparel</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('template/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{asset('template/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- iCheck -->
@@ -224,45 +223,11 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('baju.index')}}" class="nav-link">
+                <a href="{{route('trousers.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Halaman T-Shirt</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('celana.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Pants</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('kacamata.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Kacamata</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('topi.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Topi</p>
-                </a>
-              </li>
-              <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link"  onclick="event.preventDefault();
-                         document.getElementById('logout-form').submit();"
-                        {{ __('Logout') }}
-                        class="flex items-center px-4 ml-1 py-2 mt-2 text-white-100 ">
-            <i class="bi bi-box-arrow-left"></i>
-              <p>
-                Logout
-              </p>
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-          
-          </li>
-       </li>
             </ul>
           </li>         
         </ul>
@@ -296,68 +261,74 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
+        <div class="col-md-12">
+                <div class="card border-0 shadow-sm rounded">
+                    <div class="card-body">
+                        <form action="{{ route('topi.update', $topis->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
 
-                <p>New Orders</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                            <div class="form-group">
+                                <label class="font-weight-bold">GAMBAR</label>
+                                <input type="file" class="form-control" name="image">
+                            </div>
 
-                <p>Bounce Rate</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
+                            <div class="form-group">
+                                <label class="font-weight-bold">NAMA PRODUK</label>
+                                <input type="text" class="form-control @error('nama_produk') is-invalid @enderror" name="nama_produk" value="{{ old('nama_produk', $topis->nama_produk) }}" placeholder="Masukkan Judul Post">
+                            
+                                <!-- error message untuk nama_produk -->
+                                @error('nama_produk')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
 
-                <p>User Registrations</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
+                            <div class="form-group">
+                                <label class="font-weight-bold">HARGA</label>
+                                <input type="text" class="form-control @error('harga') is-invalid @enderror" name="harga" value="{{ old('harga', $topis->harga) }}" placeholder="Masukkan Judul Post">
+                            
+                                <!-- error message untuk harga -->
+                                @error('harga')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
 
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <div class="form-group">
+                                <label class="font-weight-bold">STOK</label>
+                                <input type="text" class="form-control @error('stok') is-invalid @enderror" name="stok" value="{{ old('stok', $topis->stok) }}" placeholder="Masukkan Judul Post">
+                            
+                                <!-- error message untuk stok -->
+                                @error('stok')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">DESKRIPSI</label>
+                                <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="5" placeholder="Masukkan Konten Post">{{ old('deskripsi', $topis->deskripsi) }}</textarea>
+                            
+                                <!-- error message untuk deskripsi -->
+                                @error('deskripsi')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
+                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+
+                        </form> 
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- ./col -->
-        </div>
+     
         <!-- /.row -->
     
       </div><!-- /.container-fluid -->
@@ -415,5 +386,12 @@
 <script src="{{asset('template/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('template/dist/js/pages/dashboard.js')}}"></script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'content' );
+</script>
 </body>
 </html>

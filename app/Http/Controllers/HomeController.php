@@ -25,8 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(5);
-        $trouser = Trousers::paginate(5);
+        $posts = Post::paginate(4);
+        $trouser = Trousers::paginate(4);
         return view('layouts.navUtama',compact('posts','trouser'));
     }
 

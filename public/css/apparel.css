@@ -114,51 +114,6 @@
     font-family: "Roboto", sans-serif;
     margin: 2rem 0;
 }
-/* card sneakers */
-.sneakers .card {
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-top: 0;
-}
-.sneakers .button {
-    height: 27px;
-    width: 140px;
-    margin-left: 10px;
-    position: relative;
-    background: rgb(212, 9, 9);
-    color: white;
-    margin-top: 20px;
-    display: grid;
-    place-items: center;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-.sneakers .card p {
-    text-align: center;
-    font-family: "Abril Fatface", cursive;
-    font-size: 16px;
-    font-weight: bold;
-}
-.sneakers .card h5 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-}
-/* .container1.card {
-    position: relative;
-    width: 200px;
-    height: 150px;
-    background: #333;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-right: 100px;
-} */
-.container .content h3 {
-    margin-top: 200px;
-}
-/* end card sneakersss */
 .content img {
     float: right;
     margin-right: 50px;
@@ -166,46 +121,109 @@
     height: 100px;
     width: 100px;
 }
-/* Card Trousers */
-.trousers .card {
+.judul h2 {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #fff;
+    text-align: justify;
+    margin-left: 50px;
+}
+.judul-tshirt h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+/* card tshirt */
+.Tshirt .card {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
     border-top: 0;
+    width: 214px;
+    height: 261px;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
-.trousers h5 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
+.Tshirt .card img {
+    width: 208px;
+    height: 185px;
 }
-.trousers p {
+.Tshirt .card h5 {
     text-align: center;
-    font-family: "Abril Fatface", cursive;
     font-size: 16px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.Tshirt .card p {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+}
+/* end card tshirt */
+/* card celana */
+.celana .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    height: 261px;
+    width: 214px;
+}
+.celana .card img {
+    width: 208px;
+    height: 185px;
+}
+.celana .card h5 {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.celana .card p {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+}
+/* end card celana */
+/* card apparel discount */
+.apparel .card img {
+    height: 156px;
+    width: 200px;
+    justify-items: center;
+}
+.apparel .card {
+    height: 256px;
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.apparel .card-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
     font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
 }
-/* end card trousers */
-
+.apparel .card-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+    margin-top: 10px;
+}
+/* end card */
 .footer {
     background-color: #282626;
     height: 300px;
 }
 .footer h3 {
     text-align: center;
-}
-.container2 {
-    position: relative;
-    margin-top: 100px;
-    margin-left: 68px;
-    margin-right: 70px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-.container2 img {
-    width: 175px;
-    height: 175px;
-    align-items: center;
 }
 .logo-perusahaan img {
     width: 250px;

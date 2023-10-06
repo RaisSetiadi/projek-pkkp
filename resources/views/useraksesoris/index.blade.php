@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Sepatu </title>
+    <title>Halaman Apparel </title>
     <!-- css -->
-    <link rel="stylesheet" href="{{ asset('css/sepatu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/aksesoris.css') }}">
     <!-- icons boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- boostrap -->
@@ -18,7 +18,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a href="/home"><img src="{{ asset('image/logo.png') }}" alt="" srcset="" style="height:75px;"></a>
+           <a href="/home"><img src="{{ asset('image/logo.png') }}" alt="" srcset="" style="height:75px;"></a> 
             <!-- <a class="navbar-brand" href="/home">Panda SHOP</a> -->
             <center>
                 <div class="collapse navbar-collapse" id="navbarScroll">
@@ -69,7 +69,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-        <img src="{{asset('pkkpp/halaman.jpg')}}" class="d-block w-100" alt="...">
+        <img src="{{asset('pkkpp/halamanApparel.webp')}}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
         <img src="{{asset('pkkpp/halamanSepatu.jpg')}}" class="d-block w-100" alt="...">
@@ -80,39 +80,40 @@
     </div>
     </div>
     <!-- end carousel -->
-  
-    <!-- card produk -->
-    <div class="container" style="background-color:#2FA860;">
+
+    <!-- card hot product apparel -->
+    <div class="container mt-5" style="background-color:#2FA860;">
         <div class="row justify-content-center">
-            <div class="col-md-12 judul">
+            <div class="col-md-12 judul-diskon">
                 <h2>Hot Product</h2>
             </div>
-            @foreach($sneaker as $data)
-            <div class="col-md-3 mb-5 diskon">
+            @foreach($kacamatas as $data)
+            <div class="col-md-3 mb-5 hot-product">
             <div class="card">
-                <img src="{{ asset('/storage/sneakers/'.$data->image) }}" class="card-img-top" alt="...">
+                <img src="{{ asset('/storage/kacamata/'.$data->image) }}"  class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{$data->nama_produk}}</h5>
-                    <p class="card-text">IDR {{$data->harga}}</p>
+                    <p class="card-text">IDR {{ $data->harga }}</p>
                 </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-   
-    <!-- end card produk Apparel-->
+    <!-- end card -->
 
-    <!-- card Sneakers -->
+
+    <!-- content kacamata -->
+
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 judul-tshirt">
-                <h2>Sneakers</h2>
+            <div class="col-md-12 judul-kacamata">
+                <h2>Kacamata</h2>
             </div>
-            @foreach($sneaker as $data)
-            <div class="col-md-3 mt-5 sneakers">
+            @foreach($kacamatas as $data)
+            <div class="col-md-3 mt-5 kacamata">
             <div class="card">
-                <img src="{{ asset('/storage/sneakers/'.$data->image) }}" class="card-img-top" alt="...">
+                <img src="{{ asset('/storage/kacamata/'.$data->image) }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{$data->nama_produk}}</h5>
                     <p class="card-text">IDR {{$data->harga}}</p>
@@ -122,12 +123,61 @@
             @endforeach
         </div>
     </div>
+    <!-- end content t-shirt -->
 
-    
+    <!-- carousel apparel -->
+    <div class="container">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('pkkpp/halaman.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- end carousel -->
 
-    <!-- end card trousers -->
+
+ <!-- content pants -->
+
+ <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 judul-topi">
+                <h2>Topi</h2>
+            </div>
+            @foreach($topis as $data)
+            <div class="col-md-3  topi">
+            <div class="card">
+                <img src="{{ asset('/storage/topi/'.$data->image) }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{$data->nama_produk}}</h5>
+                    <p class="card-text">IDR {{$data->harga}}</p>
+                </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <!-- end content pants -->
+
+
+  
     <!-- footer start -->
-    <div class="footer mt-5 bg-dark text-white p-5">
+    <div class="footer  bg-dark text-white p-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 logo-perusahaan">
@@ -186,8 +236,8 @@
                 </div>
             </div>
         </div>
-<!-- end footer -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <!-- end footer  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

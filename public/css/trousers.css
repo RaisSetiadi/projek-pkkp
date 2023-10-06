@@ -1,0 +1,200 @@
+/* navbar */
+.container-input {
+    position: relative;
+}
+
+.input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    transform: translate(0, -50%);
+    margin-top: 12px;
+}
+
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+.nav-item a {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-right: 30px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.carousel-item img {
+    width: 200px;
+    height: 250px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.container-input input {
+    margin-top: 30px;
+    margin-right: -25px;
+}
+.container-input {
+    margin-right: -5px;
+    margin-left: 20px;
+}
+.nav-item-barang a {
+    font-size: medium;
+    font-family: sans-serif;
+    margin-right: 30px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: rgb(49, 49, 49);
+    display: inline-block;
+    place-items: center;
+}
+.image img {
+    width: 220px;
+    height: 243px;
+}
+/* end navbar */
+
+/* hot product trousers */
+.judul-diskon h2 {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: white;
+}
+.hot-product .card {
+    width: 200px;
+    height: 256px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.hot-product .card img {
+    height: 144px;
+    width: 168px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+.hot-product .card-text {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+    margin-top: 5px;
+    text-align: center;
+}
+.hot-product .card-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+/* end hot product */
+
+/* chino */
+.judul-chino h2 {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.chino .card-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+.chino .card-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+    margin-top: 10px;
+}
+.chino .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 208px;
+    height: 184px;
+    margin-left: 30px;
+}
+/* end chino */
+
+/* cargo */
+.judul-cargo h2 {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.cargo .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 208px;
+    height: 184px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.cargo .card-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cargo .card-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+    margin-top: 10px;
+}
+
+/* end cargo */
+/* footer */
+.footer {
+    background-color: #282626;
+    height: 300px;
+    margin-top: 180px;
+}
+.footer h3 {
+    text-align: center;
+}
+.logo-perusahaan img {
+    width: 250px;
+    height: 250px;
+}
+.footer-down {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 88px;
+}
+/* footer */
