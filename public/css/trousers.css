@@ -76,18 +76,18 @@
     color: white;
 }
 .hot-product .card {
-    width: 200px;
-    height: 256px;
+    width: 210px;
+    height: 280px;
     display: inline-block;
     margin-left: 30px;
     margin-right: 30px;
 }
 .hot-product .card img {
-    height: 144px;
+    height: 148px;
     width: 168px;
     display: block;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 17px;
 }
 .hot-product .card-text {
     font-size: 16px;
@@ -107,7 +107,7 @@
 /* end hot product */
 
 /* chino */
-.judul-chino h2 {
+.judul-makmin h2 {
     margin-top: 70px;
     margin-bottom: 20px;
     color: #000000;
@@ -115,14 +115,14 @@
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
 }
-.chino .card-title {
+.makmin .card-title {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
 }
-.chino .card-text {
+.makmin .card-text {
     font-size: 16px;
     text-align: center;
     font-weight: bold;
@@ -130,7 +130,7 @@
     color: #2fa860;
     margin-top: 10px;
 }
-.chino .card {
+.makmin .card {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -140,9 +140,8 @@
     margin-left: 30px;
 }
 /* end chino */
-
-/* cargo */
-.judul-cargo h2 {
+/*  makanan*/
+.judul-makanan h2 {
     margin-top: 70px;
     margin-bottom: 40px;
     color: #000000;
@@ -150,7 +149,11 @@
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
 }
-.cargo .card {
+.makanan .card img {
+    width: 208px;
+    height: 184px;
+}
+.makanan .card {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -161,7 +164,7 @@
     margin-bottom: 50px;
     margin-top: 30px;
 }
-.cargo .card-title {
+.makanan .card-title {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     font-weight: bold;
@@ -169,7 +172,46 @@
     text-align: center;
     margin-bottom: 50px;
 }
-.cargo .card-text {
+.makanan .card-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+    margin-top: 10px;
+}
+
+/* end makanan */
+
+/* minuman */
+.judul-minuman h2 {
+    margin-top: 150px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.minuman .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 208px;
+    height: 184px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.minuman .card-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.minuman .card-text {
     font-size: 16px;
     text-align: center;
     font-weight: bold;

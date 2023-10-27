@@ -44,7 +44,9 @@ class SneakersController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -54,14 +56,20 @@ class SneakersController extends Controller
         //upload image
         $image = $request->file('image');
         $image->storeAs('public/sneakers', $image->hashName());
+        $foto_depan = $request->file('foto_depan');
+        $foto_depan->storeAs('public/sneakers', $foto_depan->hashName());
+        $foto_belakang = $request->file('foto_belakang');
+        $foto_belakang->storeAs('public/sneakers', $foto_belakang->hashName());
 
         //create sneakers
         Sneakers::create([
             'image'     => $image->hashName(),
-            'nama_produk'     => $request->nama_produk,
+            'foto_depan'     => $foto_depan->hashName(),
+            'foto_belakang'     => $foto_belakang->hashName(),
+            'nama_produk' =>$request->nama_produk,
             'harga'   => $request->harga,
             'stok'   => $request->stok,
-            'deskripsi'   => $request->deskripsi,
+            'deskripsi'   => $request->deskripsi
 
         ]);
 
@@ -102,7 +110,9 @@ class SneakersController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -118,6 +128,10 @@ class SneakersController extends Controller
             //upload new image
             $image = $request->file('image');
             $image->storeAs('public/sneakers', $image->hashName());
+            $foto_depan = $request->file('foto_depan');
+            $foto_depan->storeAs('public/sneakers', $foto_depan->hashName());
+            $foto_belakang = $request->file('foto_belakang');
+            $foto_belakang->storeAs('public/sneakers', $foto_belakang->hashName());
 
             //delete old image
             Storage::delete('public/sneakers/'.$sneaker->image);
@@ -125,6 +139,8 @@ class SneakersController extends Controller
             //update post with new image
             $sneaker->update([
                 'image'     => $image->hashName(),
+                'foto_depan' =>$foto_depan->hashName(),
+                'foto_belakang'=>$foto_belakang->hashName(),
                 'nama_produk'     => $request->nama_produk,
                 'harga'   => $request->harga,
                 'stok'   => $request->stok,

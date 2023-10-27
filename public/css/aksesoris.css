@@ -73,11 +73,20 @@
     color: white;
 }
 .hot-product .card {
-    width: 200px;
-    height: 256px;
+    width: 210px;
+    height: 280px;
     display: inline-block;
     margin-left: 30px;
+    margin-top: 15px;
     margin-right: 30px;
+}
+.hot-product .card img {
+    height: 148px;
+    width: 168px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    display: inline-block;
 }
 .hot-product .card-text {
     font-size: 16px;
@@ -97,7 +106,7 @@
 /* end card hot product */
 
 /* card kacamata */
-.judul-kacamata h2 {
+.judul-elektronik h2 {
     margin-top: 70px;
     margin-bottom: 20px;
     color: #000000;
@@ -105,14 +114,14 @@
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
 }
-.kacamata .card-title {
+.elektronik .card-title {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
 }
-.kacamata .card-text {
+.elektronik .card-text {
     font-size: 16px;
     text-align: center;
     font-weight: bold;
@@ -120,7 +129,7 @@
     color: #2fa860;
     margin-top: 10px;
 }
-.kacamata .card {
+.elektronik .card {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -128,10 +137,15 @@
     width: 208px;
     height: 184px;
     margin-left: 30px;
+    margin-bottom: 35px;
+}
+.elektronik .card img {
+    height: 181px;
+    width: 208px;
 }
 /* end card kacamata */
-/* card topi */
-.judul-topi h2 {
+/* card olahraga */
+.judul-olahraga h2 {
     margin-top: 70px;
     margin-bottom: 40px;
     color: #000000;
@@ -139,7 +153,7 @@
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
 }
-.topi .card {
+.olahraga .card {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -150,7 +164,7 @@
     margin-bottom: 50px;
     margin-top: 30px;
 }
-.topi .card-title {
+.olahraga .card-title {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     font-weight: bold;
@@ -158,15 +172,62 @@
     text-align: center;
     margin-bottom: 50px;
 }
-.topi .card-text {
+.olahraga .card-text {
     font-size: 16px;
     text-align: center;
     font-weight: bold;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: #2fa860;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
-/* end card topi */
+.olahraga .card img {
+    height: 181px;
+    width: 208px;
+}
+/* end card olahraga */
+/* card olahraga */
+.judul-otomotif h2 {
+    margin-top: 150px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.otomotif .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 208px;
+    height: 184px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.otomotif .card-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.otomotif .card-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.otomotif .card img {
+    height: 181px;
+    width: 208px;
+}
+/* end card otomotif */
 .footer {
     background-color: #282626;
     height: 300px;

@@ -20,17 +20,18 @@
             <center>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sneakers</a>
+                    <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{ route('sepatu.index') }}">Sneakers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Apparel</a>
+                            <a class="nav-link" href="{{ route('pakaian.home') }}">Pakaian</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Accessories</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('userBarangbekas.index')}}">Barang Second</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Trousers</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('userMakanan.index')}}">Makanan</a>
                         </li>
                         <!-- search -->
                         <div class="container-input">

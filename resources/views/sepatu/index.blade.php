@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Sepatu </title>
+    <link rel="website icon" type="png"href="{{asset('image/logoPi.jpeg')}} ">
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('css/sepatu.css') }}">
+    <link rel="website icon" type="png"href="{{asset('image/pi.png')}} ">
     <!-- icons boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- boostrap -->
@@ -18,22 +20,22 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a href="/home"><img src="{{ asset('image/logo.png') }}" alt="" srcset="" style="height:75px;"></a>
+        <a href="/home"><img src="{{ asset('image/logoPi.jpeg') }}" alt="" srcset="" style="height:100px; margin-left:20px;"></a> 
             <!-- <a class="navbar-brand" href="/home">Panda SHOP</a> -->
             <center>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
+                    <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('sepatu.index')}}">Sneakers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('apparel.home')}}">Apparel</a>
+                            <a class="nav-link" href="{{route('pakaian.home')}}">Pakaian</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('useraksesoris.index')}}">Accessories</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('userBarangbekas.index')}}">Barang Second</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('usertrousers.index')}}">Trousers</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('userMakanan.index')}}">Makanan</a>
                         </li>
                         <!-- search -->
                         <div class="container-input">
@@ -112,9 +114,9 @@
             @foreach($sneaker as $data)
             <div class="col-md-3 mt-5 sneakers">
             <div class="card">
-                <img src="{{ asset('/storage/sneakers/'.$data->image) }}" class="card-img-top" alt="...">
+            <a href="{{route('pesan.sneakers',$data->id)}}"><img src="{{ asset('/storage/sneakers/'.$data->image) }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                    <h5 class="card-title">{{$data->nama_produk}}</h5>
+                <h5 class="card-title">{{$data->nama_produk}}</h5>
                     <p class="card-text">IDR {{$data->harga}}</p>
                 </div>
                 </div>
@@ -122,6 +124,7 @@
             @endforeach
         </div>
     </div>
+   
 
     
 
@@ -131,7 +134,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 logo-perusahaan">
-                    <img src="{{ asset('image/logo.png') }}" alt="" srcset="">
+                <img src="{{asset('image/buat.png')}}" style="width:100px ; height:130px; margin-left:80px; margin-top:30px;"  alt="" srcset="">
                 </div>
                 <div class="col-md-2">
                     <h2 class="fw-bold">Test</h2>

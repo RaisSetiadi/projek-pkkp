@@ -10,6 +10,8 @@ class Aksesosrie extends Model
     use HasFactory;
     protected $fillable = [
         'image',
+        'foto_depan',
+        'foto_belakang',
         'nama_produk',
         'harga',
         'stok',

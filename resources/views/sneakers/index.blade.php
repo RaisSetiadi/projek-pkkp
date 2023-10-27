@@ -49,126 +49,7 @@
       </li>
     </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form action="{{ route('sneakers.cari') }}" method="GET" class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="text" name="cari" placeholder="Cari Produk" value="{{ old('cari') }}" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="submit" value="search" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
+  
   </nav>
   <!-- /.navbar -->
 
@@ -176,58 +57,158 @@
   <aside class="main-sidebar sidebar-white-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/admin/home" class="brand-link">
-      <img src="{{asset('image/images.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-dark">PANDA SHOP</span>
+      <img src="{{asset('pkkpp/pi_mart.jpg')}}" alt="PI MART Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-dark">PI MART</span>
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
+    <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li class="nav-header">HALAMAN UTAMA </li>
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
+               
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="{{route('sneakers.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Halaman Sneakers
+              </p>
+            </a>
+          </li>
+          <!-- makanan -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Makanan & Minuman
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('trousers.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Makanan Dan Minuman</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('MakananSehat.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Makanan Sehat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('MinumanSehat.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Minuman</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- end halaman makanan -->
+
+          <!-- halaman pakaian  -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                 Pakaian Dan Lain 
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('sneakers.index')}}" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Sneakers</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="{{route('posts.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Apparel</p>
+                  <p>Halaman Pakaian</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('aksesoris.index')}}" class="nav-link">
+                <a href="{{route('celana.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Accessories</p>
+                  <p>Halaman Pants</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('trousers.index')}}" class="nav-link">
+                <a href="{{route('baju.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Trousers</p>
+                  <p>Halaman T-Shirt</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('kacamata.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Kacamata</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('topi.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Topi</p>
                 </a>
               </li>
             </ul>
-          </li>         
+          </li>
+          <!-- end halaman pakaian -->
+
+          <!-- side bar halaman barang second  -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                Barang Second
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Elektronik</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Olahraga</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Otomotif</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+                <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link"  onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();"
+                        {{ __('Logout') }}
+                        class="flex items-center px-4 ml-1 py-2 mt-2 text-white-100 ">
+            <i class="bi bi-box-arrow-left"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+          
+              </li>
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
-    </div>
     <!-- /.sidebar -->
   </aside>
 
@@ -268,6 +249,8 @@
                             <thead>
                               <tr>
                                 <th scope="col">GAMBAR</th>
+                                <th scope="col">FOTO DEPAN</th>
+                                <th scope="col">FOTO BELAKANG</th>
                                 <th scope="col">NAMA PRODUK</th>
                                 <th scope="col">HARGA</th>
                                 <th scope="col">STOK</th>
@@ -280,6 +263,12 @@
                                 <tr>
                                     <td class="text-center">
                                         <img src="{{ asset('/storage/sneakers/'.$data->image) }}" class="rounded" style="width: 150px">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="{{ asset('/storage/sneakers/'.$data->foto_depan) }}" class="rounded" style="width: 150px">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="{{ asset('/storage/sneakers/'.$data->foto_belakang) }}" class="rounded" style="width: 150px">
                                     </td>
                                     <td>{{ $data->nama_produk }}</td>
                                     <td>{{ $data->harga }}</td>

@@ -1,7 +1,23 @@
 .container-input {
     position: relative;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+}
 
+.carousel-control-next-icon:after {
+    content: ">";
+    font-size: 55px;
+    color: #000000;
+}
+
+.carousel-control-prev-icon:after {
+    content: "<";
+    font-size: 55px;
+    color: #000000;
+}
 .input {
     width: 150px;
     padding: 10px 0px 10px 40px;

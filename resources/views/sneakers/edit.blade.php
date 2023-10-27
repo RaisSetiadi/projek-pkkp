@@ -176,58 +176,158 @@
   <aside class="main-sidebar sidebar-white-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/admin/home" class="brand-link">
-      <img src="{{asset('image/images.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-dark">PANDA SHOP</span>
+      <img src="{{asset('pkkpp/pi_mart.jpg')}}" alt="PI MART Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-dark">PI MART</span>
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
+    <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li class="nav-header">HALAMAN UTAMA </li>
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
+               
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="{{route('sneakers.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Halaman Sneakers
+              </p>
+            </a>
+          </li>
+          <!-- makanan -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Makanan & Minuman
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('trousers.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Makanan Dan Minuman</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('MakananSehat.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Makanan Sehat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('MinumanSehat.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Minuman</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- end halaman makanan -->
+
+          <!-- halaman pakaian  -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                 Pakaian Dan Lain 
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('sneakers.index')}}" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Sneakers</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="{{route('posts.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Apparel</p>
+                  <p>Halaman Pakaian</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('aksesoris.index')}}" class="nav-link">
+                <a href="{{route('celana.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Accessories</p>
+                  <p>Halaman Pants</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('trousers.index')}}" class="nav-link">
+                <a href="{{route('baju.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Halaman Trousers</p>
+                  <p>Halaman T-Shirt</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('kacamata.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Kacamata</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('topi.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Topi</p>
                 </a>
               </li>
             </ul>
-          </li>         
+          </li>
+          <!-- end halaman pakaian -->
+
+          <!-- side bar halaman barang second  -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                Barang Second
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Elektronik</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Olahraga</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Halaman Otomotif</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+                <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link"  onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();"
+                        {{ __('Logout') }}
+                        class="flex items-center px-4 ml-1 py-2 mt-2 text-white-100 ">
+            <i class="bi bi-box-arrow-left"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+          
+              </li>
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
-    </div>
     <!-- /.sidebar -->
   </aside>
 
@@ -266,6 +366,18 @@
                                 <label class="font-weight-bold">GAMBAR</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">FOTO DEPAN</label>
+                                <input type="file" class="form-control" name="foto_depan">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="font-weight-bold">FOTO BELAKANG</label>
+                                <input type="file" class="form-control" name="foto_belakang">
+                            </div>
+
+
 
                             <div class="form-group">
                                 <label class="font-weight-bold">NAMA PRODUK</label>

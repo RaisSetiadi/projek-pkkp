@@ -43,7 +43,9 @@ class PostController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -53,10 +55,16 @@ class PostController extends Controller
         //upload image
         $image = $request->file('image');
         $image->storeAs('public/posts', $image->hashName());
+        $foto_depan = $request->file('foto_depan');
+        $foto_depan->storeAs('public/posts', $foto_depan->hashName());
+        $foto_belakang = $request->file('foto_belakang');
+        $foto_belakang->storeAs('public/posts', $foto_belakang->hashName());
 
         //create post
         Post::create([
             'image'     => $image->hashName(),
+            'foto_depan'     => $foto_depan->hashName(),
+            'foto_belakang'     => $foto_belakang->hashName(),
             'nama_produk'     => $request->nama_produk,
             'harga'   => $request->harga,
             'stok'   => $request->stok,
@@ -96,7 +104,9 @@ class PostController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -112,6 +122,10 @@ class PostController extends Controller
             //upload new image
             $image = $request->file('image');
             $image->storeAs('public/posts', $image->hashName());
+            $foto_depan = $request->file('foto_depan');
+            $foto_depan->storeAs('public/posts', $foto_depan->hashName());
+            $foto_belakang = $request->file('foto_belakang');
+            $foto_belakang->storeAs('public/posts', $foto_belakang->hashName());
 
             //delete old image
             Storage::delete('public/posts/'.$post->image);
@@ -119,6 +133,8 @@ class PostController extends Controller
             //update post with new image
             $post->update([
                 'image'     => $image->hashName(),
+                'foto_depan'=> $foto_depan->hashName(),
+                'foto_belakang' => $foto_belakang->hashName(),
                 'nama_produk'     => $request->nama_produk,
                 'harga'   => $request->harga,
                 'stok'   => $request->stok,

@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('image');
+            $table->string('foto_depan');
+            $table->string('foto_belakang');
             $table->string('nama_produk');
             $table->integer('harga');
             $table->string('stok');

@@ -164,6 +164,7 @@
     color: #2fa860;
 }
 /* end card tshirt */
+
 /* card celana */
 .celana .card {
     border-left: 0;
@@ -189,6 +190,74 @@
     color: #2fa860;
 }
 /* end card celana */
+
+/* card kacamata */
+.judul-kacamata h2 {
+    font-size: 32px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-top: 20px;
+}
+.kacamata .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 214px;
+    height: 261px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.kacamata .card img {
+    width: 208px;
+    height: 185px;
+}
+.kacamata .card h5 {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.kacamata .card p {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+}
+/* end card kacamata */
+
+/* card topi */
+.judul-topi h2 {
+    font-size: 32px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.topi .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 214px;
+    height: 261px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.topi .card img {
+    width: 208px;
+    height: 185px;
+}
+.topi .card h5 {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.topi .card p {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #2fa860;
+}
+/* end card topi */
+
 /* card apparel discount */
 .apparel .card img {
     height: 156px;

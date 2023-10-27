@@ -43,7 +43,9 @@ class TrousersController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -53,10 +55,16 @@ class TrousersController extends Controller
         //upload image
         $image = $request->file('image');
         $image->storeAs('public/trousers', $image->hashName());
+        $foto_depan = $request->file('foto_depan');
+        $foto_depan->storeAs('public/trousers', $foto_depan->hashName());
+        $foto_belakang = $request->file('foto_belakang');
+        $foto_belakang->storeAs('public/trousers', $foto_belakang->hashName());
 
         //create sneakers
         Trousers::create([
             'image'     => $image->hashName(),
+            'foto_depan'     => $foto_depan->hashName(),
+            'foto_belakang'     => $foto_belakang->hashName(),
             'nama_produk'     => $request->nama_produk,
             'harga'   => $request->harga,
             'stok'   => $request->stok,
@@ -95,7 +103,9 @@ public function edit(string $id): View
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -111,6 +121,10 @@ public function edit(string $id): View
             //upload new image
             $image = $request->file('image');
             $image->storeAs('public/trousers', $image->hashName());
+            $foto_depan = $request->file('foto_depan');
+            $foto_depan->storeAs('public/trousers', $foto_depan->hashName());
+            $foto_belakang = $request->file('foto_belakang');
+            $foto_belakang->storeAs('public/trousers', $foto_belakang->hashName());
 
             //delete old image
             Storage::delete('public/trousers/'.$trouser->image);
@@ -118,6 +132,8 @@ public function edit(string $id): View
             //update post with new image
             $trouser->update([
                 'image'     => $image->hashName(),
+                'foto_depan'     => $foto_depan->hashName(),
+                'foto_belakang'     => $foto_belakang->hashName(),
                 'nama_produk'     => $request->nama_produk,
                 'harga'   => $request->harga,
                 'stok'   => $request->stok,
@@ -149,5 +165,18 @@ public function edit(string $id): View
         // mengirim data pegawai ke view index
         return view('trousers.index', compact('trouser'));
     }
-    
+    public function destroy($id): RedirectResponse
+    {
+        //get post by ID
+        $trouser = Trousers::findOrFail($id);
+
+        //delete image
+        Storage::delete('public/trousers/'. $trouser->image);
+
+        //delete post
+        $trouser->delete();
+
+        //redirect to index
+        return redirect()->route('trousers.index')->with(['success' => 'Data Berhasil Dihapus!']);
+    }
 }

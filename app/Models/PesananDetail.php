@@ -9,8 +9,8 @@ class PesananDetail extends Model
 {
     use HasFactory;
 
-    public function post(){
-        return $this->belongsTo('App\Post','post_id','id');
+    public function posts(){
+        return $this->belongsTo('App\Post','posts_id','id');
 
     }
     public function pesanan(){

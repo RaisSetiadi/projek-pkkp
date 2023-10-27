@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+    width: 750px;
+}
+
+form {
+    width: 250px;
+    margin: 60px auto;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+}
+
+p {
+    text-align: left;
+    margin: 5px;
+}
+
+a {
+    color: #3d845a;
+    text-decoration: none;
+}
+
+.right img {
+    width: 450px;
+    height: 90%;
+    margin-right: 25px;
+}
+
+.right span {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    margin-left: 48px;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+input {
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border-radius: 5px;
+    border: solid #d9d9d9;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 15px;
+    color: black;
+    background: #d9d9d9;
+}

@@ -67,119 +67,7 @@
         </div>
     </nav>
     <!-- end navbar -->
-    <!-- carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('pkkpp/halamanApparel.webp') }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('pkkpp/halamanSepatu.jpg') }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('pkkpp/halaman.jpg') }}" class="d-block w-100" alt="...">
-            </div>
-        </div>
-    </div>
-    <!-- end carousel -->
-
-    <!-- card hot product apparel -->
-    <div class="container mt-5" style="background-color:#2FA860;">
-        <div class="row justify-content-center">
-            <div class="col-md-12 judul-diskon">
-                <h2>Hot Product</h2>
-            </div>
-            @foreach ($trouser as $data)
-                <div class="col-md-3 mb-5 hot-product">
-                    <div class="card">
-                        <img src="{{ asset('/storage/trousers/' . $data->image) }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $data->nama_produk }}</h5>
-                            <p class="card-text">IDR {{ $data->harga }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-    <!-- end card -->
-
-
-    <!-- content kacamata -->
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 judul-chino">
-                <h2>Chino</h2>
-            </div>
-            @foreach ($kacamatas as $data)
-                <div class="col-md-3 mt-5 chino">
-                    <div class="card">
-                        <img src="{{ asset('/storage/kacamata/' . $data->image) }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $data->nama_produk }}</h5>
-                            <p class="card-text">IDR {{ $data->harga }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-    <!-- end content t-shirt -->
-
-    <!-- carousel apparel -->
-    <div class="container">
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('pkkpp/halaman.jpg') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- end carousel -->
-
-
-    <!-- content pants -->
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 judul-cargo">
-                <h2>Cargo</h2>
-            </div>
-            @foreach ($topis as $data)
-                <div class="col-md-3 cargo">
-                    <div class="card">
-                        <img src="{{ asset('/storage/topi/' . $data->image) }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $data->nama_produk }}</h5>
-                            <p class="card-text">IDR {{ $data->harga }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-    <!-- end content pants -->
-
-
-
+    
     <!-- footer start -->
     <div class="footer  bg-dark text-white p-5">
         <div class="container-fluid">
@@ -241,9 +129,7 @@
             </div>
         </div>
         <!-- end footer  -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

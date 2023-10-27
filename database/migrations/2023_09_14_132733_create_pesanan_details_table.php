@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pesanan_details', function (Blueprint $table) {
             $table->id();
-            $table->integer('post_id');
+            $table->integer('posts_id');
             $table->integer('pesanan_id');
             $table->integer('jumlah');
             $table->integer('jumlah_harga');

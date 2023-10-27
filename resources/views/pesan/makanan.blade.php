@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Keterangan Produk</title>
+    <title>Halaman Keterangan Produk Makanan</title>
+    <link rel="website icon" type="png"href="{{asset('image/logoPi.jpeg')}} ">
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('css/pesan.css') }}">
     <!-- icons boostrap -->
@@ -18,22 +19,23 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <img src="{{ asset('image/logo.png') }}" alt="" srcset="" style="height:75px;">
+        <a href="/home"><img src="{{ asset('image/logoPi.jpeg') }}" alt="" srcset="" style="height:100px; margin-left:20px;"></a> 
             <!-- <a class="navbar-brand" href="/home">Panda SHOP</a> -->
             <center>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sneakers</a>
+                    <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{ route('sepatu.index') }}">Sneakers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Apparel</a>
+                            <a class="nav-link" href="{{ route('pakaian.home') }}">Pakaian</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Accessories</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('userBarangbekas.index')}}">Barang Second</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Trousers</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('userMakanan.index')}}">Makanan</a>
                         </li>
                         <!-- search -->
                         <div class="container-input">
@@ -76,7 +78,36 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{ asset('/storage/trousers/'.$trouser->image) }}" class="rounded mx-auto d-block " alt="" srcset="">
+                        <div id="carouselExample" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img src="{{ asset('/storage/trousers/'.$trouser->image) }}"
+                                            class="rounded mx-auto d-block " alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="{{ asset('/storage/trousers/'.$trouser->foto_depan) }}"
+                                            class="rounded mx-auto d-block " alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="{{ asset('/storage/trousers/'.$trouser->foto_belakang) }}"
+                                            class="rounded mx-auto d-block " alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                    </div>
+                                    <div class="col-md-6 foto">
+                              <img src="{{ asset('/storage/trousers/'.$trouser->foto_depan) }}" style="width: 250px; height: 210px;" alt="">
+                                </div>  
+                                <div class="col-md-6 foto">
+                                <img src="{{ asset('/storage/trousers/'.$trouser->foto_belakang) }}" style="width: 250px; height: 210px; display:flex;" alt="">
+                                </div>  
                         </div>
                         <div class="col-md-6 deskripsi">
                         <h4>{{ $trouser->nama_produk }}</h4>
@@ -143,7 +174,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 logo-perusahaan">
-                    <img src="{{asset('image/logo.png')}}" alt="" srcset="">
+                <img src="{{asset('image/buat.png')}}" style="width:100px ; height:130px; margin-left:80px; margin-top:30px;"  alt="" srcset="">
                 </div>
                 <div class="col-md-2">
                     <h2 class="fw-bold">Test</h2>
@@ -199,6 +230,7 @@
         </div>
       </div>
       <!-- end footer -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 

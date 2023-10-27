@@ -1,4 +1,4 @@
-.container-input {
+/* .container-input {
     position: relative;
 }
 
@@ -10,6 +10,11 @@
     transition: all 0.2s ease-in-out;
     outline: none;
     opacity: 0.8;
+}
+.nav-item dropdown {
+    height: 50px;
+    width: 20px;
+    margin-right: 50px;
 }
 
 .container-input svg {
@@ -23,16 +28,62 @@
 .input:focus {
     opacity: 1;
     width: 250px;
+} */
+
+.container-input {
+    width: 220px;
+    position: relative;
 }
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: 0.2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+
+.input-container:hover > .icon {
+    animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+    0%,
+    100% {
+        transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+}
+
 .nav-item a {
     font-size: 16px;
     font-weight: bold;
     font-family: sans-serif;
     margin-right: 30px;
-    margin-left: 60px;
+    margin-left: 30px;
     margin-bottom: 20px;
     margin-top: 30px;
 }
+
 .carousel-item img {
     width: 200px;
     height: 250px;
@@ -120,18 +171,92 @@
     border-right: 0;
     border-bottom: 0;
     border-top: 0;
+    width: 214px;
+    height: 261px;
+    margin-bottom: 80px;
+}
+.sneakers .card img {
+    width: 208px;
+    height: 185px;
 }
 .sneakers .button {
-    height: 27px;
-    width: 140px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 55px;
+    margin-left: 55px;
     position: relative;
-    background: rgb(212, 9, 9);
-    color: white;
-    margin-top: 20px;
-    display: grid;
-    place-items: center;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #ff1e00;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #ff1e00;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.sneakers .card button:hover {
+    background: #f5f7f8;
+    box-shadow: 0 0 30px 5px #ff1e00;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.sneakers .card button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.sneakers .card button::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #e8f9fd;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.sneakers .card button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.sneakers .card a {
+    text-decoration: none;
 }
 .sneakers .card p {
     text-align: center;
@@ -172,6 +297,8 @@
     border-right: 0;
     border-bottom: 0;
     border-top: 0;
+    width: 214px;
+    height: 261px;
 }
 .trousers h5 {
     text-align: center;
@@ -187,25 +314,39 @@
 }
 /* end card trousers */
 
+/* card untuk barang bekas  */
+.barangbekas .card {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 214px;
+    height: 261px;
+}
+.barangebkas h5 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.barangbekas p {
+    text-align: center;
+    font-family: "Abril Fatface", cursive;
+    font-size: 16px;
+    font-weight: bold;
+}
+.barangbekas .card img {
+    width: 208px;
+    height: 185px;
+}
+/* end card barang bekas */
+
 .footer {
     background-color: #282626;
     height: 300px;
 }
 .footer h3 {
     text-align: center;
-}
-.container2 {
-    position: relative;
-    margin-top: 100px;
-    margin-left: 68px;
-    margin-right: 70px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-.container2 img {
-    width: 175px;
-    height: 175px;
-    align-items: center;
 }
 .logo-perusahaan img {
     width: 250px;

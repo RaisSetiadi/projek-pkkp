@@ -44,7 +44,9 @@ class AksesoriesController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -54,10 +56,16 @@ class AksesoriesController extends Controller
         //upload image
         $image = $request->file('image');
         $image->storeAs('public/aksesoris', $image->hashName());
+        $foto_depan = $request->file('foto_depan');
+        $foto_depan->storeAs('public/aksesoris', $foto_depan->hashName());
+        $foto_belakang = $request->file('foto_belakang');
+        $foto_belakang->storeAs('public/aksesoris', $foto_belakang->hashName());
 
         //create post
         Aksesosrie::create([
             'image'     => $image->hashName(),
+            'foto_depan'     => $foto_depan->hashName(),
+            'foto_belakang'     => $foto_belakang->hashName(),
             'nama_produk'     => $request->nama_produk,
             'harga'   => $request->harga,
             'stok'   => $request->stok,
@@ -97,7 +105,9 @@ class AksesoriesController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'image'     => 'image|mimes:jpeg,jpg,png|max:2048',
+            'image'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_depan'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'foto_belakang'     => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
             'nama_produk'     => 'required|min:5',
             'harga'   => 'required|min:5',
             'stok'   => 'required|min:2',
@@ -113,6 +123,10 @@ class AksesoriesController extends Controller
             //upload new image
             $image = $request->file('image');
             $image->storeAs('public/aksesoris', $image->hashName());
+            $foto_depan = $request->file('foto_depan');
+            $foto_depan->storeAs('public/aksesoris', $foto_depan->hashName());
+            $foto_belakang = $request->file('foto_belakang');
+            $foto_belakang->storeAs('public/aksesoris', $foto_belakang->hashName());
 
             //delete old image
             Storage::delete('public/aksesoris/'.$aksesoris->image);
@@ -120,6 +134,8 @@ class AksesoriesController extends Controller
             //update post with new image
             $aksesoris->update([
                 'image'     => $image->hashName(),
+                'foto_depan' =>$foto_depan->hashName(),
+                'foto_belakang' =>$foto_belakang->hashName(),
                 'nama_produk'     => $request->nama_produk,
                 'harga'   => $request->harga,
                 'stok'   => $request->stok,

@@ -104,8 +104,8 @@
     border-right: 0;
     border-bottom: 0;
     border-top: 0;
-    width: 200px;
-    height: 256px;
+    width: 214px;
+    height: 261px;
 }
 .sneakers .card-body h5 {
     font-size: 16px;
@@ -125,6 +125,7 @@
 }
 .diskon .card {
     border-radius: 10px;
+    height: 280px;
     width: 200px;
 }
 .diskon .card-body h5 {
@@ -140,7 +141,7 @@
     text-align: center;
 }
 .diskon .card img {
-    height: 250px;
+    height: 180px;
     width: 190px;
 }
 
